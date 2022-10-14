@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".activities.LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.finalyearproject.shoppingvilleapp.utills.MSVTextViewBold
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:text="Welcome Back"
+            android:textColor="@color/actionColor"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:boxStrokeColor="@color/actionColor"
+            app:hintTextColor="@color/actionColor">
+
+            <com.finalyearproject.shoppingvilleapp.utills.MSVEditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:cursorVisible="true"
+                android:textColor="@color/colorSecondaryText"
+                android:inputType="textEmailAddress"
+                android:padding="15dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:passwordToggleEnabled="true"
+            app:boxStrokeColor="@color/actionColor"
+            app:hintTextColor="@color/actionColor">
+
+            <com.finalyearproject.shoppingvilleapp.utills.MSVEditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:cursorVisible="true"
+                android:inputType="textPassword"
+                android:padding="15dp"
+                android:textColorHint="@color/colorSecondaryText" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.finalyearproject.shoppingvilleapp.utills.MSVTextViewBold
+            android:id="@+id/btn_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="5dp"
+            android:text="@string/btn_forgot_Password"
+            android:textColor="@color/actionColor"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <com.finalyearproject.shoppingvilleapp.utills.MSVButton
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_background_ripple"
+            android:clickable="true"
+            android:elevation="10dp"
+            android:focusable="true"
+            android:text="Login"
+            android:textColor="@color/color_white"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@color/colorSecondaryText" />
+
+            <com.finalyearproject.shoppingvilleapp.utills.MSVTextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="0"
+                android:text="OR Sign In with"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@color/colorSecondaryText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.finalyearproject.shoppingvilleapp.utills.MSVButton
+                android:id="@+id/btn_google_sign_in"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/rectangle_button_stroke_bg"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:backgroundTint="@color/light_grey"
+                android:drawableStart="@drawable/google_icon"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:text="Google"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimaryText" />
+
+            <com.finalyearproject.shoppingvilleapp.utills.MSVButton
+                android:id="@+id/btn_facebook_sign_in"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/rectangle_button_stroke_bg"
+                android:backgroundTint="@color/light_grey"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:drawableStart="@drawable/facebook_icon"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Facebook"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimaryText" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.finalyearproject.shoppingvilleapp.utills.MSVTextView
+                android:id="@+id/txtAlreadyAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Don'nt have an account? "
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="12sp" />
+
+            <com.finalyearproject.shoppingvilleapp.utills.MSVTextViewBold
+                android:id="@+id/btn_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="5dp"
+                android:text="@string/btn_register"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

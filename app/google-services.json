@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "580199908233",
+    "project_id": "shopping-ville-app",
+    "storage_bucket": "shopping-ville-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:580199908233:android:12a6668b2f651bdc221758",
+        "android_client_info": {
+          "package_name": "com.finalyearproject.shoppingvilleapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "580199908233-hcbt2meipls9d1ar028ilv8eflnbek1r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.finalyearproject.shoppingvilleapp",
+            "certificate_hash": "a849bd6680167766bddb912966abdf71835b99de"
+          }
+        },
+        {
+          "client_id": "580199908233-am1s5jio4oh9i3ujrhui1ivsk4oenmoh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmnla1m5yLcPL5yn0tUrQGq3pWjHDlVmo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "580199908233-am1s5jio4oh9i3ujrhui1ivsk4oenmoh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

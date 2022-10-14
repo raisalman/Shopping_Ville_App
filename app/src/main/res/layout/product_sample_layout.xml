@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="160dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/product_corner_round_bg"
+    android:orientation="vertical">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/product_sample_imageView"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:clickable="true"
+        android:scaleType="fitCenter"
+        app:riv_corner_radius_top_left="10dp"
+        app:riv_corner_radius_top_right="10dp"
+        android:src="@drawable/img7" />
+
+    <com.finalyearproject.shoppingvilleapp.utills.MSVTextView
+        android:id="@+id/product_sample_name"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:clickable="true"
+        android:maxLines="2"
+        android:text="Groceries"
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:orientation="horizontal">
+
+        <com.finalyearproject.shoppingvilleapp.utills.MSVTextViewBold
+            android:id="@+id/Rs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs."
+            android:textColor="@color/color_red"
+            android:textSize="12sp" />
+
+        <com.finalyearproject.shoppingvilleapp.utills.MSVTextViewBold
+            android:id="@+id/product_sample_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,299"
+            android:textColor="@color/color_red"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="5dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_star_rate_yellow" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_star_rate_yellow" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_star_rate_yellow" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_star_rate_yellow" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/ic_star_rate_half" />
+
+        <com.finalyearproject.shoppingvilleapp.utills.MSVTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="( 10 )" />
+
+    </LinearLayout>
+        <com.finalyearproject.shoppingvilleapp.utills.MSVTextView
+            android:id="@+id/shipping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:clickable="true"
+            android:singleLine="true"
+            android:text="Free Shipping"
+            android:layout_margin="5dp"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="10sp" />
+
+</LinearLayout>

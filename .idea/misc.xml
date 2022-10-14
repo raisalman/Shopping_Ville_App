@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable-v24/button_bg.xml" value="0.2078125" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable-v24/ic_arrow_right.xml" value="0.2078125" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable-v24/ic_baseline_arrow_back_ios_24.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable-v24/small_button_bg.xml" value="0.1485" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/button_background_ripple.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/button_background_secondary.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/button_baclground_ripple.xml" value="0.2078125" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/cart_item_bg.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/circle_stroke_button_bg.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/cursor_color.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/edittext_background.xml" value="0.111" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/gender_tab_selecter.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/gender_tab_text_color_selector.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/ic_add.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/ic_arrow_back.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/ic_arrow_down.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/ic_arrow_forward.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/ic_arrow_up.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.111" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml" value="0.111" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/ic_chat.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/ic_favorite.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/ic_heart_outlined.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/ic_home.xml" value="0.111" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/ic_location.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/ic_menu.xml" value="0.111" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/ic_notifications.xml" value="0.111" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/ic_settings.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/ic_star_rate_half.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/ic_star_rate_yellow.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/ic_star_unrated.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/ic_store.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/ic_subtract.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/payment_card_bg.xml" value="0.111" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/product_corner_round_bg.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/profile_image_stroke_bg.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/rectangle_button_stroke_bg.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/search_icon.xml" value="0.111" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/side_nav_bar.xml" value="0.145" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/drawable/transparent_gradient.xml" value="0.111" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_add_new_address.xml" value="0.2" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_add_new_card.xml" value="0.25" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_add_product.xml" value="0.25" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_add_product_two.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_add_shipping_address.xml" value="0.25" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_address_book.xml" value="0.33" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_addresss_book.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_card_book.xml" value="0.25" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_categories.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_checkout.xml" value="0.18" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_feature_product.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_frorgot_password.xml" value="0.22" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_home_page.xml" value="0.22" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_landing.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_my_cart.xml" value="0.25" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_order_details.xml" value="0.25" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_order_failed.xml" value="0.22" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_order_review.xml" value="0.22" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_order_success.xml" value="0.22" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_payment.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_payment_options.xml" value="0.22" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_privacy_policy.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_product_descriprion.xml" value="0.25" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_product_reviews.xml" value="0.22" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_profile.xml" value="0.22" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_rating_and_reviews.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_recovery_otp.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_register.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_settings.xml" value="0.18" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/activity_splash.xml" value="0.22" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/address_sample_layout.xml" value="0.25" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/app_bar_home.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/app_bar_main.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/button_backgroung_secondary.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/card_sample_layout.xml" value="0.33" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/category_sample_layout.xml" value="0.5" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/content_home.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/content_main.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/customer_review_samle_layout.xml" value="0.22" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/customer_review_sample_layout.xml" value="0.25" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/description_activity_toolbar.xml" value="0.17777777777777778" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/dialog_progress.xml" value="0.22" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/fragment_favourite.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/fragment_home.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/fragment_profile.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/home_activity_toolbar.xml" value="0.22" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/nav_header_main.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/order_details_sample_layout.xml" value="0.22" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/product_sample_layout.xml" value="0.5" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/layout/sample_product_cart.xml" value="0.22" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/menu/activity_main_drawer.xml" value="0.22" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/menu/home.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/menu/main.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/xml/tabs.xml" value="0.17777777777777778" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ShoppingVilleApp/app/src/main/res/xml/xml.xml" value="0.18697916666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

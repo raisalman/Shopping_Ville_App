@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@color/actionColor"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/male_model"
+        android:contentDescription="@string/nav_header_desc"/>
+
+    <com.finalyearproject.shoppingvilleapp.utills.MSVTextViewBold
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:gravity="center"
+        android:text="Rai Salman"
+        android:textColor="@color/color_white"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <com.finalyearproject.shoppingvilleapp.utills.MSVTextView
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="raisalmank278@gmail.com" />
+</LinearLayout>

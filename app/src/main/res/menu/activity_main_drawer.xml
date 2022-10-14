@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_outline_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_favourite"
+            android:icon="@drawable/ic_outline_favorite"
+            android:title="Favourites" />
+        <item
+            android:id="@+id/nav_categories"
+            android:icon="@drawable/ic_category"
+            android:title="Categories"/>
+        <item
+            android:id="@+id/nav_feature_products"
+            android:icon="@drawable/ic_feature"
+            android:title="Feature Products" />
+        <item
+            android:id="@+id/nav_trending"
+            android:icon="@drawable/ic_trend"
+            android:title="Trending Products" />
+        <item
+            android:id="@+id/nav_my_cart"
+            android:icon="@drawable/ic_outline_shopping_cart"
+            android:title="My Cart" />
+
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/ic_order_complete"
+            android:title="Orders" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_outline_settings"
+            android:title="Settings" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_info"
+            android:title="Help" />
+
+    </group>
+
+    <item
+        android:id="@+id/nav_log_out"
+        android:icon="@drawable/ic_logout"
+        android:title="Log Out" />
+</menu>

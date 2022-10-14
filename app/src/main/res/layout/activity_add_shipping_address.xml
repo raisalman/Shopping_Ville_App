@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.AddShippingAddressActivity"
+    android:fillViewport="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_product_desc"
+        android:layout_width="match_parent"
+        android:background="@color/color_white"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_gravity="top">
+
+        <com.finalyearproject.shoppingvilleapp.utills.MSVTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Shipping Address"
+            android:textSize="14sp"
+            android:layout_gravity="center"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back"
+            android:padding="5dp"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+           android:layout_marginTop="10dp"
+            android:background="@color/color_white"
+            android:padding="16dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:boxStrokeColor="@color/actionColor"
+                app:hintTextColor="@color/actionColor">
+
+                <com.finalyearproject.shoppingvilleapp.utills.MSVEditText
+                    android:id="@+id/et_full_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Full Name"
+                    android:inputType="textPersonName"
+                    android:padding="15dp"
+                    android:textCursorDrawable="@drawable/cursor_color" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:boxStrokeColor="@color/actionColor"
+                app:hintTextColor="@color/actionColor">
+
+                <com.finalyearproject.shoppingvilleapp.utills.MSVEditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mobile Number"
+                    android:inputType="phone"
+                    android:padding="15dp"
+                    android:textCursorDrawable="@drawable/cursor_color" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:boxStrokeColor="@color/actionColor"
+                app:hintTextColor="@color/actionColor">
+
+                <com.finalyearproject.shoppingvilleapp.utills.MSVEditText
+                    android:id="@+id/et_province"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Province"
+                    android:inputType="text"
+                    android:padding="15dp"
+                    android:textCursorDrawable="@drawable/cursor_color" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:boxStrokeColor="@color/actionColor"
+                app:hintTextColor="@color/actionColor">
+
+                <com.finalyearproject.shoppingvilleapp.utills.MSVEditText
+                    android:id="@+id/et_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="City"
+                    android:inputType="text"
+                    android:padding="15dp"
+                    android:textCursorDrawable="@drawable/cursor_color" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:boxStrokeColor="@color/actionColor"
+                app:hintTextColor="@color/actionColor">
+
+                <com.finalyearproject.shoppingvilleapp.utills.MSVEditText
+                    android:id="@+id/et_town"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Town"
+                    android:inputType="text"
+                    android:padding="15dp"
+                    android:textCursorDrawable="@drawable/cursor_color" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:boxStrokeColor="@color/actionColor"
+                app:hintTextColor="@color/actionColor">
+
+                <com.finalyearproject.shoppingvilleapp.utills.MSVEditText
+                    android:id="@+id/et_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Address"
+                    android:inputType="text"
+                    android:padding="15dp"
+                    android:textCursorDrawable="@drawable/cursor_color" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@color/color_white"
+           android:layout_marginTop="10dp"
+           android:padding="16dp"
+           android:orientation="vertical">
+
+           <com.finalyearproject.shoppingvilleapp.utills.MSVTextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:text="Select a label for effective delivery"
+               android:textColor="@color/color_black" />
+
+           <RadioGroup
+               android:id="@+id/radio_group"
+               android:layout_width="match_parent"
+               android:layout_height="50dp"
+               android:layout_marginTop="10dp"
+               android:padding="5dp"
+               android:checkedButton="@id/rb_home"
+               android:orientation="horizontal">
+
+               <com.finalyearproject.shoppingvilleapp.utills.MSVRadioButton
+                  android:id="@+id/rb_home"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1"
+                   android:button="@null"
+                   android:gravity="center"
+                   android:layout_marginEnd="5dp"
+                   android:layout_marginStart="5dp"
+                   android:background="@drawable/gender_tab_selecter"
+                   android:text="Home"
+                   android:textColor="@drawable/gender_tab_text_color_selector" />
+
+               <com.finalyearproject.shoppingvilleapp.utills.MSVRadioButton
+                   android:id="@+id/rb_office"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1"
+                   android:layout_marginStart="5dp"
+                   android:layout_marginEnd="5dp"
+                   android:button="@null"
+                   android:gravity="center"
+                   android:background="@drawable/gender_tab_selecter"
+                   android:text="Office"
+                   android:textColor="@drawable/gender_tab_text_color_selector" />
+
+               <com.finalyearproject.shoppingvilleapp.utills.MSVRadioButton
+                   android:id="@+id/rb_others"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1"
+                   android:layout_marginStart="5dp"
+                   android:layout_marginEnd="5dp"
+                   android:button="@null"
+                   android:gravity="center"
+                   android:background="@drawable/gender_tab_selecter"
+                   android:text="Others"
+                   android:textColor="@drawable/gender_tab_text_color_selector" />
+           </RadioGroup>
+       </LinearLayout>
+
+            <com.finalyearproject.shoppingvilleapp.utills.MSVButton
+                android:id="@+id/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/button_background_ripple"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textColor="@color/color_white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+        </LinearLayout>
