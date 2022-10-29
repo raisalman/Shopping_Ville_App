@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.finalyearproject.shoppingvilleapp.R
 import com.finalyearproject.shoppingvilleapp.models.CategoryModel
 
-class CategoryAdapter (private val categoryList: List<CategoryModel>)
+class CategoryAdapter (private var categoryList: List<CategoryModel>)
     : RecyclerView.Adapter<CategoryAdapter.ViewHolder>(){
 
 
@@ -32,6 +32,14 @@ class CategoryAdapter (private val categoryList: List<CategoryModel>)
     override fun getItemCount(): Int {
 
         return categoryList.size
+    }
+
+    // method for filtering our recyclerview items.
+    fun filterList(filterList: ArrayList<CategoryModel>) {
+
+        categoryList = filterList
+
+        notifyDataSetChanged()
     }
 
     class ViewHolder(itemView: View) :RecyclerView.ViewHolder(itemView){

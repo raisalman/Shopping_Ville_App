@@ -21,6 +21,10 @@
             android:icon="@drawable/ic_feature"
             android:title="Feature Products" />
         <item
+            android:id="@+id/nav_recent_products"
+            android:icon="@drawable/ic_recent"
+            android:title="Recent Products" />
+        <item
             android:id="@+id/nav_trending"
             android:icon="@drawable/ic_trend"
             android:title="Trending Products" />
@@ -32,7 +36,7 @@
         <item
             android:id="@+id/nav_orders"
             android:icon="@drawable/ic_order_complete"
-            android:title="Orders" />
+            android:title="My Orders" />
         <item
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_outline_settings"

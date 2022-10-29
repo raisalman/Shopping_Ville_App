@@ -31,10 +31,10 @@ class SplashActivity : AppCompatActivity() {
 
         @Suppress("DEPRECATION")
         Handler().postDelayed({
-            val intent = Intent(this@SplashActivity, LoginActivity::class.java)
+            val intent = Intent(this@SplashActivity, MainActivity::class.java)
             startActivity(intent)
             finish()
-        }, 3000)
+        }, 2000)
 
     }
 }

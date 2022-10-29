@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_auto_image_slider"
+        android:layout_width="match_parent"
+        android:src="@drawable/img15"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter" />
+
+    <FrameLayout
+        android:id="@+id/fl_shadow_container"
+        android:background="@drawable/bg_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <com.finalyearproject.shoppingvilleapp.utills.MSVTextView
+            android:id="@+id/tv_auto_image_slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="25dp"
+            android:text="Flat 70% Off on all Perfume Brands"
+            android:padding="6dp"
+            android:textColor="@color/color_white"
+            android:textSize="16sp" />
+
+    </FrameLayout>
+
+</FrameLayout>

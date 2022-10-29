@@ -133,7 +133,7 @@
                 app:layout_constraintTop_toTopOf="@+id/textView12" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView3"
+                android:id="@+id/reviewsRV"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 app:layout_constraintEnd_toEndOf="parent"

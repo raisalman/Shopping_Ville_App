@@ -19,6 +19,7 @@ import com.finalyearproject.shoppingvilleapp.firestore.FireStoreClass
 import com.finalyearproject.shoppingvilleapp.models.UserModel
 import com.finalyearproject.shoppingvilleapp.utills.Constants
 import com.google.android.gms.tasks.OnSuccessListener
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import java.io.IOException
@@ -26,9 +27,9 @@ import java.io.IOException
 class ProfileActivity : BaseActivity(), View.OnClickListener {
     private val mFireStore = FirebaseFirestore.getInstance()
     private var binding: ActivityProfileBinding? = null
-    private lateinit var galleryLauncher:ActivityResultLauncher<String>
-    private val mStorage= FirebaseStorage.getInstance()
-    private var imageUrl=""
+    private lateinit var galleryLauncher: ActivityResultLauncher<String>
+    private lateinit var mStorage: FirebaseStorage
+    private var imageUrl = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,27 +37,37 @@ class ProfileActivity : BaseActivity(), View.OnClickListener {
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
+        mStorage=FirebaseStorage.getInstance()
+
+        if (FirebaseAuth.getInstance().currentUser == null) {
+            val intent = Intent(this, LoginActivity::class.java)
+            intent.putExtra(Constants.ACTIVITY, "profile")
+            startActivity(intent)
+            finish()
+        } else {
+            //Get current user data from Firestore
+            getUserDetailsFromDatabase()
+        }
         //Email ID can't be changed
         binding?.etEmailId?.isEnabled = false
 
-        //Get current user data from Firestore
-        getUserDetailsFromDatabase()
+        galleryLauncher = registerForActivityResult(
+            ActivityResultContracts.GetContent(),
+            ActivityResultCallback { uri ->
 
-        galleryLauncher=registerForActivityResult(ActivityResultContracts.GetContent()
-            , ActivityResultCallback { uri->
-                binding?.profileIv?.setImageURI(uri)
                 //Store user profile image to storage
-                val storageReference=mStorage.reference.child("Images/")
+                val storageReference = mStorage.reference.child("Images/")
                 storageReference.child(FireStoreClass().getCurrentUserId()).putFile(uri)
                     .addOnSuccessListener {
-                        storageReference.downloadUrl.addOnSuccessListener(OnSuccessListener { imageUri->
-                            imageUrl=imageUri.toString()
+                        storageReference.downloadUrl.addOnSuccessListener(OnSuccessListener { imageUri ->
+                            imageUrl = imageUri.toString()
+                            binding?.profileIv?.setImageURI(imageUri)
                             showErrorSnackBar(
                                 imageUrl,
                                 false
                             )
                         })
-                    }.addOnFailureListener{exception->
+                    }.addOnFailureListener { exception ->
 
                         showErrorSnackBar(
                             exception.toString(),
@@ -82,12 +93,13 @@ class ProfileActivity : BaseActivity(), View.OnClickListener {
                 }
                 binding?.profileIv?.id -> {
 
-                    if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_EXTERNAL_STORAGE
+                    if (ContextCompat.checkSelfPermission(
+                            this, android.Manifest.permission.READ_EXTERNAL_STORAGE
                         ) == PackageManager.PERMISSION_GRANTED
                     ) {
 
                         //method call to open gallery and select image
-                       galleryLauncher.launch("image/*")
+                        galleryLauncher.launch("image/*")
                     } else {
                         ActivityCompat.requestPermissions(
                             this,
@@ -96,9 +108,10 @@ class ProfileActivity : BaseActivity(), View.OnClickListener {
                         )
                     }
                 }
-                binding?.btnAddShippingAddress?.id->{
-                    val intent=Intent(this@ProfileActivity,AddShippingAddressActivity::class.java)
-                    intent.putExtra("type","profile")
+                binding?.btnAddShippingAddress?.id -> {
+                    val intent =
+                        Intent(this@ProfileActivity, AddShippingAddressActivity::class.java)
+                    intent.putExtra("type", "profile")
                     startActivity(intent)
                 }
             }
@@ -125,7 +138,7 @@ class ProfileActivity : BaseActivity(), View.OnClickListener {
             }
         }
 
-        val userDetails= hashMapOf<String,Any>(
+        val userDetails = hashMapOf<String, Any>(
             "firstName" to firstName,
             "lastName" to lastName,
             "mobile" to phone,
@@ -133,11 +146,11 @@ class ProfileActivity : BaseActivity(), View.OnClickListener {
             "image" to imageUrl
         )
 
-        FireStoreClass().updateUserInfo(this@ProfileActivity,userDetails)
+        FireStoreClass().updateUserInfo(this@ProfileActivity, userDetails)
 
     }
 
-    private fun getUserDetailsFromDatabase(){
+    private fun getUserDetailsFromDatabase() {
         showProgressDialog()
         mFireStore.collection(Constants.USERS)
             .document(FireStoreClass().getCurrentUserId())
@@ -156,10 +169,10 @@ class ProfileActivity : BaseActivity(), View.OnClickListener {
                     .centerCrop()
                     .into(binding?.profileIv!!)
 
-                if (userDetails.gender=="Female"){
-                    binding?.rbFemale?.isChecked=true
-                }else{
-                    binding?.rbMale?.isChecked=true
+                if (userDetails.gender == "Female") {
+                    binding?.rbFemale?.isChecked = true
+                } else {
+                    binding?.rbMale?.isChecked = true
                 }
 
             }

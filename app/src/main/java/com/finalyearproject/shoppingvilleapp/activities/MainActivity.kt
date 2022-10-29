@@ -18,6 +18,7 @@ import com.finalyearproject.shoppingvilleapp.R
 import com.finalyearproject.shoppingvilleapp.databinding.ActivityMainBinding
 import com.finalyearproject.shoppingvilleapp.databinding.NavHeaderMainBinding
 import com.finalyearproject.shoppingvilleapp.firestore.FireStoreClass
+import com.finalyearproject.shoppingvilleapp.fragments.FavouriteFragment
 import com.finalyearproject.shoppingvilleapp.fragments.HomeFragment
 import com.finalyearproject.shoppingvilleapp.models.UserModel
 import com.finalyearproject.shoppingvilleapp.utills.Constants
@@ -49,12 +50,13 @@ View.OnClickListener{
         //method call to replace fragment
         replaceFragment(HomeFragment())
         //method call to set the user info in navigation drawer header
-        setUserDetailsHeader()
+        if (FirebaseAuth.getInstance().currentUser!=null) {
+            setUserDetailsHeader()
+        }
 
         drawerLayout = binding.drawerLayout
         navView = binding.navigationView
         readableBottomBar= binding.appBarMain.contentMain.readableBottomBar
-        readableBottomBar.selectItem(0)
         toolbar=binding.appBarMain.toolbar
         toolbar.title = "Home"
 
@@ -64,13 +66,20 @@ View.OnClickListener{
         readableBottomBar.setOnItemSelectListener(object :
             ReadableBottomBar.ItemSelectListener {
             override fun onItemSelected(index: Int) {
+                readableBottomBar.selectItem(index)
                 when(index){
                     0->{
                         replaceFragment(HomeFragment())
+                    }
+                    1->{
+                        val intent=Intent(this@MainActivity,SearchActivity ::class.java)
+                        startActivity(intent)
+                    }
+                    2->{
                         readableBottomBar.selectItem(index)
+                        replaceFragment(FavouriteFragment())
                     }
                     3->{
-                        readableBottomBar.selectItem(index)
                         val intent=Intent(this@MainActivity,MyCartActivity ::class.java)
                         startActivity(intent)
                     }
@@ -115,13 +124,31 @@ View.OnClickListener{
                replaceFragment(HomeFragment())
             }
             R.id.nav_favourite->{
-                Toast.makeText(
-                    this,
-                    "Favourite Navigation",Toast.LENGTH_LONG).show()
+               BaseActivity().replaceFragment(FavouriteFragment())
             }
             R.id.nav_settings->{
 
                 val intent=Intent(this@MainActivity,SettingsActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.nav_categories->{
+
+                val intent=Intent(this@MainActivity,CategoriesActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.nav_feature_products->{
+
+                val intent=Intent(this@MainActivity,FeatureProductActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.nav_trending->{
+                val intent=Intent(this@MainActivity,FeatureProductActivity::class.java)
+                intent.putExtra(Constants.ACTIVITY,"trending")
+                startActivity(intent)
+            }
+            R.id.nav_recent_products->{
+                val intent=Intent(this@MainActivity,FeatureProductActivity::class.java)
+                intent.putExtra(Constants.ACTIVITY,"recent")
                 startActivity(intent)
             }
             R.id.nav_log_out->{

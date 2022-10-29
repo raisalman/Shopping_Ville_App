@@ -26,10 +26,16 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
     private lateinit var googleSignInClient: GoogleSignInClient
     private lateinit var database:FirebaseFirestore
 
+    var intentActivity=""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding?.root)
+
+        if (intent.hasExtra(Constants.ACTIVITY)){
+            intentActivity=intent.getStringExtra(Constants.ACTIVITY)!!
+        }
 
         auth = FirebaseAuth.getInstance()
         database=FirebaseFirestore.getInstance()
@@ -46,13 +52,6 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
         binding?.btnRegister?.setOnClickListener(this)
         binding?.btnForgotPassword?.setOnClickListener(this)
         binding?.btnGoogleSignIn?.setOnClickListener(this)
-
-        if(auth.currentUser!=null)
-        {
-            val intent=Intent(this,MainActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
 
     }
 
@@ -97,9 +96,21 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
                             Toast.LENGTH_SHORT
                         ).show()
                         // Navigate to MainActivity
-                        val intent = Intent(this, MainActivity::class.java)
-                        startActivity(intent)
-                        finish()
+
+                        if (intentActivity=="profile"){
+                            val intent=Intent(this,ProfileActivity::class.java)
+                            startActivity(intent)
+                            finish()
+                        }
+                        if (intentActivity=="cart"){
+                            val intent=Intent(this,MyCartActivity::class.java)
+                            startActivity(intent)
+                            finish()
+                        }else {
+                            val intent = Intent(this, MainActivity::class.java)
+                            startActivity(intent)
+                            finish()
+                        }
 
                     } else {
 
@@ -150,7 +161,6 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
             }
         }
     }
-    // [END onactivityresult]
 
     // [START auth_with_google]
     private fun firebaseAuthWithGoogle(idToken: String) {
@@ -172,8 +182,20 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
                     database.collection(Constants.USERS)
                         .document(user?.uid.toString()).set(userDetails)
 
-                    val intent=Intent(this,MainActivity::class.java)
-                    startActivity(intent)
+                    if (intentActivity=="profile"){
+                        val intent=Intent(this,ProfileActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    }
+                    if (intentActivity=="cart"){
+                        val intent=Intent(this,MyCartActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    }else {
+                        val intent = Intent(this, MainActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    }
 
                 } else {
                     // If sign in fails, display a message to the user.

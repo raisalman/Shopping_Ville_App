@@ -16,7 +16,7 @@ import com.finalyearproject.shoppingvilleapp.models.CategoryModel
 import com.finalyearproject.shoppingvilleapp.models.ProductModel
 import com.finalyearproject.shoppingvilleapp.utills.Constants
 
-class ProductAdapter(private val productList: List<ProductModel>) :
+class ProductAdapter(private var productList: List<ProductModel>) :
     RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
 
     private lateinit var context:Context
@@ -26,6 +26,14 @@ class ProductAdapter(private val productList: List<ProductModel>) :
             .inflate(R.layout.product_sample_layout, parent, false)
         context=parent.context
         return ViewHolder(view)
+    }
+
+    // method for filtering our recyclerview items.
+    fun filterList(filterList: ArrayList<ProductModel>) {
+
+        productList = filterList
+
+        notifyDataSetChanged()
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

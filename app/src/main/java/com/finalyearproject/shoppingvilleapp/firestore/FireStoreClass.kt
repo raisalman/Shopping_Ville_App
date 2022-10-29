@@ -1,20 +1,16 @@
 package com.finalyearproject.shoppingvilleapp.firestore
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.util.Log
 import android.widget.Toast
 import com.finalyearproject.shoppingvilleapp.activities.*
-import com.finalyearproject.shoppingvilleapp.models.AddressModel
-import com.finalyearproject.shoppingvilleapp.models.CardModel
-import com.finalyearproject.shoppingvilleapp.models.UserModel
+import com.finalyearproject.shoppingvilleapp.models.*
 import com.finalyearproject.shoppingvilleapp.utills.Constants
-import com.google.android.gms.tasks.OnSuccessListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
-import com.google.firebase.storage.FirebaseStorage
 
 class FireStoreClass() {
 
@@ -47,6 +43,55 @@ class FireStoreClass() {
                 ).show()
 
                 activity.hideProgressDialog()
+            }
+    }
+
+    fun addProduct(activity: Activity, productDetails: ProductModel) {
+
+        mDatabase.collection(Constants.PRODUCTS)
+            .document(productDetails.id)
+            .set(productDetails, SetOptions.merge())
+            .addOnSuccessListener {
+
+                Toast.makeText(
+                    activity,
+                    "Product added Success",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+            .addOnFailureListener { exception ->
+
+                Toast.makeText(
+                    activity,
+                    exception.toString(),
+                    Toast.LENGTH_LONG
+                ).show()
+
+                BaseActivity().hideProgressDialog()
+            }
+    }
+    fun addCategory(activity: Activity, categoryDetails: CategoryModel) {
+
+        mDatabase.collection(Constants.CATEGORIES)
+            .document(categoryDetails.category_id)
+            .set(categoryDetails, SetOptions.merge())
+            .addOnSuccessListener {
+
+                Toast.makeText(
+                    activity,
+                    "Product added Success",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+            .addOnFailureListener { exception ->
+
+                Toast.makeText(
+                    activity,
+                    exception.toString(),
+                    Toast.LENGTH_LONG
+                ).show()
+
+                BaseActivity().hideProgressDialog()
             }
     }
 
@@ -232,5 +277,46 @@ class FireStoreClass() {
             }
 
     }
+
+//    fun addToFavourite(activity:Activity, productID:String){
+//        mDatabase.collection(Constants.USERS)
+//            .document(getCurrentUserId())
+//            .collection("favourite products")
+//            .add(productID)
+//            .addOnSuccessListener{
+//                Toast.makeText(
+//                    activity,
+//                    "Add to Favourite Success",
+//                    Toast.LENGTH_LONG
+//                ).show()
+//            }
+//            .addOnFailureListener {exception->
+//                Toast.makeText(
+//                    activity,
+//                    exception.toString(),
+//                    Toast.LENGTH_LONG
+//                ).show()
+//            }
+//    }
+//    fun addToCart(activity:Activity, productID:String){
+//        mDatabase.collection(Constants.USERS)
+//            .document(getCurrentUserId())
+//            .collection("my cart")
+//            .add(productID)
+//            .addOnSuccessListener{
+//                Toast.makeText(
+//                    activity,
+//                    "Add to Cart Success",
+//                    Toast.LENGTH_LONG
+//                ).show()
+//            }
+//            .addOnFailureListener {exception->
+//                Toast.makeText(
+//                    activity,
+//                    exception.toString(),
+//                    Toast.LENGTH_LONG
+//                ).show()
+//            }
+//    }
 
 }

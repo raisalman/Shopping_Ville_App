@@ -22,69 +22,51 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:background="@color/light_grey">
-
-                <com.finalyearproject.shoppingvilleapp.utills.MSVEditText
+                <com.finalyearproject.shoppingvilleapp.utills.MSVTextView
+                    android:id="@+id/home_search"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:layout_margin="10dp"
+                    android:text="Search Products"
+                    android:gravity="start|center_vertical"
                     android:background="@drawable/edittext_background"
                     android:drawableEnd="@drawable/search_icon"
-                    android:hint="Search products"
+                    android:clickable="true"
                     android:inputType="text"
                     android:padding="10dp"
-                    android:textSize="14sp" />
-            </FrameLayout>
+                    android:textSize="14sp"
+                    android:focusable="true" />
 
-            <FrameLayout
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="6dp"
+                android:layout_margin="16dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="20dp">
+                android:layout_height="wrap_content">
 
-                <com.makeramen.roundedimageview.RoundedImageView
-                    android:id="@+id/imageView1"
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/imageSlider"
                     android:layout_width="match_parent"
-                    android:layout_height="350dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/img12"
-                    app:riv_corner_radius="10dp" />
+                    android:layout_height="300dp"
+                    app:sliderAnimationDuration="600"
+                    app:sliderAutoCycleDirection="back_and_forth"
+                    app:sliderAutoCycleEnabled="true"
+                    app:sliderIndicatorAnimationDuration="600"
+                    app:sliderIndicatorGravity="center_horizontal|bottom"
+                    app:sliderIndicatorMargin="15dp"
+                    app:sliderIndicatorOrientation="horizontal"
+                    app:sliderIndicatorPadding="3dp"
+                    app:sliderIndicatorRadius="2dp"
+                    app:sliderIndicatorSelectedColor="@color/color_white"
+                    app:sliderIndicatorUnselectedColor="@color/color_grey"
+                    app:sliderStartAutoCycle="true" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#9F000000"/>
-
-                <com.finalyearproject.shoppingvilleapp.utills.MSVTextViewBold
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="20dp"
-                    android:text="FLAT 50% OFF"
-                    android:textStyle="bold"
-                    android:textColor="@color/color_red"
-                    android:textSize="28sp" />
-
-                <com.finalyearproject.shoppingvilleapp.utills.MSVTextViewBold
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:text="On All Perfume Brands"
-                    android:textColor="@color/color_white"
-                    android:textSize="18sp" />
-
-            </FrameLayout>
+            </androidx.cardview.widget.CardView>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_margin="10dp"
                 android:gravity="center_vertical">
 
                 <com.finalyearproject.shoppingvilleapp.utills.MSVTextView
@@ -99,24 +81,18 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <com.finalyearproject.shoppingvilleapp.utills.MSVTextView
-                    android:id="@+id/textView10"
+                    android:id="@+id/btn_all_category"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="See All"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
                     android:textColor="@color/actionColor"
                     android:textSize="14sp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/appCompatImageView6"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/appCompatImageView6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:src="@drawable/ic_arrow_right"
-                    android:tint="@color/actionColor"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:drawableEnd="@drawable/ic_arrow_right"
+                    app:drawableTint="@color/actionColor"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -126,7 +102,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -137,9 +112,10 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:gravity="center_vertical">
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
 
                 <com.finalyearproject.shoppingvilleapp.utills.MSVTextView
                     android:id="@+id/textView7"
@@ -153,35 +129,27 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <com.finalyearproject.shoppingvilleapp.utills.MSVTextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/btn_all_feature_products"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:drawableEnd="@drawable/ic_arrow_right"
+                    android:focusable="true"
+                    android:gravity="center"
                     android:text="See All"
                     android:textColor="@color/actionColor"
                     android:textSize="14sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/appCompatImageView5"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/appCompatImageView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:src="@drawable/ic_arrow_right"
-                    android:tint="@color/actionColor"
+                    app:drawableTint="@color/actionColor"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/feature_product_recyclerview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 tools:listitem="@layout/product_sample_layout" />
@@ -189,12 +157,49 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_margin="10dp"
                 android:gravity="center_vertical">
 
                 <com.finalyearproject.shoppingvilleapp.utills.MSVTextView
-                    android:id="@+id/textView91"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trending Products"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.finalyearproject.shoppingvilleapp.utills.MSVTextView
+                    android:id="@+id/btn_all_trending_products"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See All"
+                    android:textColor="@color/actionColor"
+                    android:textSize="14sp"
+                    android:drawableEnd="@drawable/ic_arrow_right"
+                    app:drawableTint="@color/actionColor"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/trending_products_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                tools:listitem="@layout/product_sample_layout" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical">
+
+                <com.finalyearproject.shoppingvilleapp.utills.MSVTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Recent Products"
@@ -205,35 +210,24 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <com.finalyearproject.shoppingvilleapp.utills.MSVTextView
-                    android:id="@+id/textView32"
+                    android:id="@+id/btn_all_recent_products"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="See All"
                     android:textColor="@color/actionColor"
                     android:textSize="14sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/appCompatImageView51"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/appCompatImageView51"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:src="@drawable/ic_arrow_right"
-                    android:tint="@color/actionColor"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:drawableEnd="@drawable/ic_arrow_right"
+                    app:drawableTint="@color/actionColor"
+                    android:gravity="center"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recent_products_recyclerview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 tools:listitem="@layout/product_sample_layout" />

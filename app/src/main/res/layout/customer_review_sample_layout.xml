@@ -12,7 +12,7 @@
        android:layout_height="wrap_content">
 
        <de.hdodenhof.circleimageview.CircleImageView
-           android:id="@+id/profile_image"
+           android:id="@+id/iv_review_sample"
            android:layout_width="50dp"
            android:layout_height="50dp"
            android:src="@drawable/male_model"
@@ -21,14 +21,14 @@
            app:layout_constraintTop_toTopOf="parent" />
 
        <com.finalyearproject.shoppingvilleapp.utills.MSVTextViewBold
-           android:id="@+id/textView11"
+           android:id="@+id/tv_name_review_sample"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:text="Customer Name"
            android:layout_marginStart="10dp"
            android:textSize="18sp"
            app:layout_constraintBottom_toBottomOf="parent"
-           app:layout_constraintStart_toEndOf="@+id/profile_image"
+           app:layout_constraintStart_toEndOf="@+id/iv_review_sample"
            app:layout_constraintTop_toTopOf="parent"
            app:layout_constraintVertical_bias="0.487" />
 
@@ -71,7 +71,7 @@
    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.finalyearproject.shoppingvilleapp.utills.MSVTextView
-        android:id="@+id/comment"
+        android:id="@+id/tv_comment_review_sample"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
