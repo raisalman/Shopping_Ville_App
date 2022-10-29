@@ -17,6 +17,7 @@ class CardBookActivity : BaseActivity(),View.OnClickListener {
         setContentView(binding.root)
 
         binding.btnAddNewCard.setOnClickListener(this)
+        binding.btnBack.setOnClickListener(this)
 
     }
 
@@ -26,6 +27,9 @@ class CardBookActivity : BaseActivity(),View.OnClickListener {
                binding.btnAddNewCard.id->{
                    val intent=Intent(this@CardBookActivity,AddNewCardActivity::class.java)
                    startActivity(intent)
+               }
+               binding.btnBack.id->{
+                   onBackPressedDispatcher.onBackPressed()
                }
            }
        }

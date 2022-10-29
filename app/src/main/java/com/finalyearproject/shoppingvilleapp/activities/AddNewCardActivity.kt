@@ -35,7 +35,7 @@ class AddNewCardActivity : BaseActivity(),View.OnClickListener {
        if (view!=null){
            when(view.id){
                binding.btnBack.id ->{
-                   onBackPressed()
+                   onBackPressedDispatcher.onBackPressed()
                }
                binding.btnSave.id ->{
                    uploadCard()

@@ -58,7 +58,7 @@ class CheckoutActivity : BaseActivity(),View.OnClickListener {
         if (view!=null){
             when(view.id){
                 binding.btnBack.id->{
-                    onBackPressed()
+                    onBackPressedDispatcher.onBackPressed()
                 }
                 binding.btnPlaceOrder.id->{
                     val intent=Intent(this@CheckoutActivity,PaymentOptionsActivity::class.java)

@@ -57,7 +57,7 @@ class ProfileActivity : BaseActivity(), View.OnClickListener {
 
                 //Store user profile image to storage
                 val storageReference = mStorage.reference.child("Images/")
-                storageReference.child(FireStoreClass().getCurrentUserId()).putFile(uri)
+                storageReference.child(FireStoreClass().getCurrentUserId()).putFile(uri!!)
                     .addOnSuccessListener {
                         storageReference.downloadUrl.addOnSuccessListener(OnSuccessListener { imageUri ->
                             imageUrl = imageUri.toString()

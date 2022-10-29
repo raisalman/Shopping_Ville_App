@@ -31,10 +31,10 @@ class PaymentOptionsActivity :BaseActivity(),View.OnClickListener  {
     override fun onClick(view: View?) {
         if (view!=null){
             when(view.id){
-                binding?.btnBack?.id->{
-                    onBackPressed()
+                binding.btnBack.id ->{
+                    onBackPressedDispatcher.onBackPressed()
                 }
-                binding?.btnAddCard?.id->{
+                binding.btnAddCard.id ->{
                     val intent=Intent(this@PaymentOptionsActivity,CardBookActivity::class.java)
                     startActivity(intent)
                 }
